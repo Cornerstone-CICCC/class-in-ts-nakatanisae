@@ -10,7 +10,7 @@ It is your turn to find out how you want to setup the repository with typescript
 
 ### Luggage Types
 
-You will implement three types of luggage:
+You will implement three types of luggage:  
 
 1. Carry-on luggage
 2. Fragile luggage
