@@ -39,11 +39,11 @@ abstract class Luggage {
     abstract toString(): string;
 
     getInsuranceValue(): number {
-        return 0;
+       return 0;
     }
 
-    setInsuranceValue(value: number): string {
-        return "Insurance is only applicable to fragile luggage.";
+    setInsuranceValue(value: number): void {
+        throw new Error("Insurance is only applicable to fragile luggage.");
     }
 
 }
