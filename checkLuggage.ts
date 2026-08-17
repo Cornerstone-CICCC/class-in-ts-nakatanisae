@@ -136,3 +136,22 @@ class CarryOnLuggage extends Luggage {
     }
 
 }
+
+//test
+const fragileLuggage = new FragileLuggage(
+  10,
+  "Box with fragile items",
+  Priority.Normal,
+  100
+);
+const regularLuggage = new RegularLuggage(
+  30,
+  "Luggage full of clothes",
+  Priority.Priority
+);
+const carryOnLuggage = new CarryOnLuggage(
+  6,
+  "Luggage with personal items",
+  Priority.Urgent
+);
+

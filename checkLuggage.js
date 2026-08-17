@@ -105,3 +105,14 @@ class CarryOnLuggage extends Luggage {
         return `${this.description} (Carry-on)`;
     }
 }
+//test
+const fragileLuggage = new FragileLuggage(10, "Box with fragile items", Priority.Normal, 100);
+const regularLuggage = new RegularLuggage(30, "Luggage full of clothes", Priority.Priority);
+const carryOnLuggage = new CarryOnLuggage(6, "Luggage with personal items", Priority.Urgent);
+// const list = new ListOfLuggages();
+// list.insertLuggage(fragileLuggage);
+// list.insertLuggage(regularLuggage);
+// list.printAllLuggages();
+// list.priceOfEachLuggage();
+// console.log(list.totalPrice());
+// console.log(list.getFragileLuggageWithInsurance());
