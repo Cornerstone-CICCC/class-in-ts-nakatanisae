@@ -1,25 +1,49 @@
-enum priority{
-    normal = "Normal",
-    priority = "Prioirty",
-    urgent = "Urgent"
+enum Priority{
+    Normal = "Normal",
+    Priority = "Priority",
+    Urgent = "Urgent"
 }
   
 
 
-class RegularLuggage{
-    constructor(
-        weight: number,
-        description: string,
-        priority: priority,
-        fee: number,
-    ){
+abstract class Luggage{
+        protected weight: number;
+        protected description: string;
+        protected priority: Priority;
+        protected readonly fee: number = 5.20;
+    
+    
+    constructor(weight: number, description: string, priority: Priority){
         this.weight = weight;
         this.description = description;
-        this.priprity = priority;
-        this.fee = fee;
+        this.priority = priority;
     }
 
-    if(this.weight < 23){
-        
+    getWeight(): number{
+        return this.weight;
     }
+
+    setWeight(weight: number){
+        this.weight = weight;
+    }
+
+    getDescription(): string{
+        return this.description;
+    }
+
+    getPriority():Priority{
+        return this.priority
+    }
+
+    abstract getPrice(): number;
+    abstract toString(): string;
+
+    getInsuranceValue(): number{
+        return 0;
+    }
+
+    setInsuranceValue(value: number): string{
+        return "Insurance is only applicable to fragile luggage.";
+    }
+
 }
