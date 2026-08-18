@@ -1,4 +1,6 @@
-class ListOfLuggages{
+import { Luggage } from './Luggage.js';
+
+export class ListOfLuggages{
     private luggages: Luggage[];
 
     constructor(){
@@ -21,22 +23,22 @@ class ListOfLuggages{
         }
     }
 
-    totalPrive():void{
+    totalPrice():number{
         const total = this.luggages.reduce(function(sum, luggage){
             return sum += luggage.getPrice();
         }, 0);
 
-        console.log(`Total Price: ${total}`);
+        return total;
     }
 
-    getFragileLuggageWithInsurance():void{
+    getFragileLuggageWithInsurance():{ count: number; totalInsurance: number }{
         const fragileLuggages = this.luggages.filter(luggage => luggage.getInsuranceValue() > 0);
         const count = fragileLuggages.length;
         const totalInsurance = fragileLuggages.reduce(function(sum, luggage){
             return sum += luggage.getInsuranceValue();
         }, 0);
 
-        console.log(`Quantity: ${count}, Total Insurance: ${totalInsurance}`);        
+        return {count, totalInsurance};  
     }
 
     sortByPrice():void{

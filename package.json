@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "dependencies": {
     "init": "^0.1.2",
     "typescript": "^7.0.2"
